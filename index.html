@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Grid Template Columns</title>
+  <title>Using CSS Grid</title>
   <style>
     body {
       color: #fff;
@@ -11,13 +11,22 @@
     }
 
     #content {
+      outline: hsl(0, 0%, 30%) solid 3px;
       display: grid;
-
-      /*grid-template-columns: 33.3% 33.3% 33.3%;*/
-      /*grid-template-columns: 30% 20% 50%;*/
-      /*grid-template-columns: 1fr 1fr 1fr;*/
-      /*grid-template-columns: 1fr 2fr 1fr;*/
       grid-template-columns: repeat(3, 1fr);
+
+      /* - grid-auto-rows sets the height for each row in the grid - */
+
+      /*grid-auto-rows: 200px;*/
+      /*grid-auto-rows: minmax(200px, auto);*/
+
+      grid-template-rows: repeat(3, minmax(200px, auto));
+
+      /*column-gap: 10px;
+      row-gap: 10px;*/
+
+      /* - shortand for column-gap and row-gap - */
+      gap: 10px;
 
       max-width: 960px;
       margin: 0 auto;
@@ -30,6 +39,7 @@
 
     #content div:nth-child(even) {
       background: #777;
+      /*padding: 30px;*/
     }
   </style>
 </head>
@@ -40,7 +50,12 @@
 
     <div>1</div>
     <div>2</div>
-    <div>3</div>
+    <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+      type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+      of Lorem Ipsum.</div>
     <div>4</div>
     <div>5</div>
     <div>6</div>
