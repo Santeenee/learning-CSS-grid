@@ -10,60 +10,62 @@
 
     body {
       color: white;
-      font-family: 'Nunito Semibold';
+      font-family: sans-serif;
+      text-align: center;
+      margin: .5rem;
     }
 
     #content {
       display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: minmax(100px, auto);
+      gap: .5rem;
 
-      grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: repeat(6, minmax(150px, auto));
-      gap: 10px;
+      grid-template-areas:
+        "header   header  header  header"
+        "aside    .       main    main"
+        "aside    .       main    main"
+        "nav      .       main    main"
+        "nav      .       main    main"
+        "section  section section section"
+        "section  section section section"
+        "footer   footer  footer  footer"
+      ;
 
       max-width: 960px;
-      transform: rotateZ(45deg) scale(.5);
+      margin: 0 auto;
     }
 
-    #content div {
-      padding: 30px;
+    #content>* {
       display: grid;
       place-items: center;
+      padding: 30px;
+      background-color: hsl(191, 85%, 34%);
+      border: 2px solid hsl(191, 85%, 20%);
     }
 
-    #content span {
-      font-size: 5em;
-      font-family: sans-serif;
-      transform: rotateZ(-45deg);
+    header {
+      grid-area: header;
     }
 
-    .one {
-      grid-column: 1 / 3;
-      grid-row: 1/5;
-      background-color: #F89B29;
+    main {
+      grid-area: main;
     }
 
-    .two {
-      grid-column: 3/7;
-      grid-row: 1/3;
-      background-color: #FA6C44;
+    section {
+      grid-area: section;
     }
 
-    .three {
-      grid-column: 3/5;
-      grid-row: 3/5;
-      background-color: #FC5552;
+    aside {
+      grid-area: aside;
     }
 
-    .four {
-      grid-column: 5/7;
-      grid-row: 3/7;
-      background-color: #FD3E60;
+    nav {
+      grid-area: nav;
     }
 
-    .five {
-      grid-column: 1/5;
-      grid-row: 5/7;
-      background-color: #FF0F7B;
+    footer {
+      grid-area: footer;
     }
   </style>
 </head>
@@ -72,11 +74,12 @@
 
   <div id="content">
 
-    <div class="one"><span>1</span></div>
-    <div class="two"><span>2</span></div>
-    <div class="three"><span>3</span></div>
-    <div class="four"><span>4</span></div>
-    <div class="five"><span>5</span></div>
+    <header>Header</header>
+    <main>Main</main>
+    <section>Section</section>
+    <aside>Aside</aside>
+    <nav>Nav</nav>
+    <footer>Footer</footer>
 
   </div>
 
