@@ -6,16 +6,51 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS Grid Layout</title>
+  <style>
+    .grid {
+      outline: 2px solid red;
+      display: grid;
+      grid-template-columns: 70% 30%;
+      gap: .5em;
+    }
+
+    .grid>div {
+      background: #eee;
+      padding: 1em;
+    }
+
+    .grid>div:nth-child(odd) {
+      background: #ddd;
+    }
+  </style>
 </head>
 
 <body>
   <div class="grid">
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae fugit officiis error beatae. Assumenda inventore ut
-    autem qui, perspiciatis facere quae rem exercitationem iure illum vero aliquam aspernatur sint repellendus in.
-    Aliquid, aliquam perspiciatis? Assumenda quia accusamus, delectus veniam cumque sunt eius earum deleniti! Ab enim
-    pariatur qui sed molestias voluptatem amet dolorem dolorum quae temporibus tempore molestiae deleniti rerum unde
-    adipisci ratione cumque, aut veritatis ut! Maxime, neque! Asperiores, labore voluptatibus. Eveniet, voluptatum et
-    rerum culpa suscipit illo rem?
+    <div>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae fugit officiis error beatae. Assumenda inventore ut
+      autem qui, perspiciatis facere quae rem exercitationem iure illum vero aliquam aspernatur sint repellendus in.
+      Aliquid, aliquam perspiciatis? Assumenda quia accusamus, delectus veniam cumque sunt eius earum deleniti! Ab enim
+      pariatur qui sed molestias voluptatem amet dolorem dolorum quae temporibus tempore molestiae deleniti rerum unde
+      adipisci ratione cumque, aut veritatis ut! Maxime, neque! Asperiores, labore voluptatibus. Eveniet, voluptatum et
+      rerum culpa suscipit illo rem?
+    </div>
+    <div>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus adipisci perspiciatis voluptatibus fugit
+      expedita animi nemo quod culpa consectetur tenetur, molestias explicabo quo nostrum mollitia dolorem hic. Cum, rem
+      error!
+    </div>
+    <div>asdfasdfasd
+      fasdfasdf
+    </div>
+    <div>qwerqwerqwerqwer
+      qwerqwerqwerqwiquam aspernatur sint repellendus in.
+      Aliquid, aliquam perspiciatis? Assumenda quia accusamus, delectus veniam cumque sunt eius earum deleniti! Ab enim
+      pariatur qui sed molestias voluptatem amet dolorem dolorum quae temporibus tempore molestiae deleniti rerum unde
+      adipisci ratione cumque, aut veritatis ut! Maxime, neque! Asperiores, labore voluptatibus. Eveniet, voluptatum et
+      rerum culpa suscipit illo rem?
+    </div>
+    <div>hello</div>
   </div>
 </body>
 

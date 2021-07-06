@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid 2</title>
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    .grid>div {
+      background: #eee;
+      padding: 1em;
+    }
+
+    .grid>div:nth-child(odd) {
+      background: #ddd;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid">
+    <div>
+      lorem4
+    </div>
+    <div>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, at.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ppudiandae cumque officia beatae?
+    </div>
+    <div>
+      lorem4
+    </div>
+    <div>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, at.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ppudiandae cumque officia beatae?
+    </div>
+  </div>
+
+</body>
+
+</html>
